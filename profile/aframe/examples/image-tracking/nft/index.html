@@ -31,21 +31,20 @@
   -->
 
   <a-scene
-  vr-mode-ui='enabled: false;'
-  renderer="logarithmicDepthBuffer: true; precision: medium;"
-  embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+      vr-mode-ui='enabled: false;'
+      renderer="logarithmicDepthBuffer: true; precision: medium;"
+      embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
 
-  <!-- use rawgithack to retrieve the correct url for nft marker (see 'trex' below) -->
-  <a-nft
-  type='nft' url='./nft-marker/Marker_img'
-  smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+      <!-- ใช้ Hiro marker -->
+      <a-marker preset="hiro">
+          <!-- ใช้ <a-video> สำหรับแสดงวิดีโอ -->
           <a-video
               src="#myVideo"
               position="0 0 0"
               rotation="-90 0 0"
               scale="2 1 1">
           </a-video>
-        </a-nft>
+      </a-marker>
 
       <a-entity camera></a-entity>
   </a-scene>
