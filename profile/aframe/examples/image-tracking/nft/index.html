@@ -31,9 +31,10 @@
   -->
 
   <a-scene
-      vr-mode-ui='enabled: false;'
-      renderer="logarithmicDepthBuffer: true; precision: medium;"
-      embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+  vr-mode-ui='enabled: false;'
+  renderer="logarithmicDepthBuffer: true; precision: medium;"
+  embedded
+  arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false; willReadFrequently: true;'>
 
 
       <!-- ใช้รูปภาพ Marker_img.jpg เป็น NFT Marker -->
